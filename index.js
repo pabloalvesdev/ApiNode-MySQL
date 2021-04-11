@@ -8,7 +8,12 @@ const App = Express()
 App.use(cors())
 App.use(bodyParser.urlencoded({ extended: false }))
 App.use(bodyParser.json())
-const banco = mysql.createConnection({host: 'localhost', user: 'root', password: '', database: 'mysql_api'})
+const banco = mysql.createConnection({
+        host: 'localhost', 
+        user: 'root', 
+        password: '', 
+        database: 'mysql_api'
+    })
 banco.connect() ? console.log('banco conectado') : console.log('banco não conectado')
 
 //ROTAS
